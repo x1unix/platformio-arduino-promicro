@@ -4,7 +4,7 @@ help:
 
 .PHONY: check_pio
 check_pio:
-	@command -v pio >/dev/null 2>&1 || (echo "Error: pio command not found. Please install PlatformIO Core." && exit 1)
+	@command -v pio >/dev/null 2>&1 || (echo "Error: pio command not found. Please install PlatformIO Core: https://docs.platformio.org/en/latest/core/index.html" && exit 1)
 
 .PHONY: compiledb
 compiledb: check_pio
