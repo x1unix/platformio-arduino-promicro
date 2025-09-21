@@ -1,5 +1,13 @@
 # PlatformIO project template for Arduino
 
+This is a Arduino project template for PlatformIO.
+
+Template includes:
+
+- Clang-format rules
+- Clangd configuration for LLDB LSP server.
+- Makefile with common recipies.
+
 ## Prerequesities
 
 1. Install [PlatformIO Core CLI](https://docs.platformio.org/en/latest/core/index.html).
