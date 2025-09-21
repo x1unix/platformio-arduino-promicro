@@ -2,19 +2,22 @@
 help:
 	@echo "Usage: make [build|upload|monitor|compiledb]"
 
+.PHONY: check_pio
+check_pio:
+	@command -v pio >/dev/null 2>&1 || (echo "Error: pio command not found. Please install PlatformIO Core." && exit 1)
+
 .PHONY: compiledb
-compiledb:
-	pio run -t compiledb
+compiledb: check_pio
+	@pio run -t compiledb
 
 .PHONY: build
-build:
-	pio run
+build: check_pio
+	@pio run
 
 .PHONY: upload
-upload:
-	pio run --target upload
+upload: check_pio
+	@pio run --target upload
 
 .PHONY: monitor
-monitor:
-	pio device monitor
-
+monitor: check_pio
+	@pio device monitor
